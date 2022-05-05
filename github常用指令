@@ -1,0 +1,55 @@
+将网上的仓库同步到一个文件夹中
+git init
+git remote add origin ** //远程添加源头
+git add .
+git commit -m ""
+
+git push -u origin master//首次提交数据
+git pull origin master//获取全部数据
+
+添加资源
+git add .
+git commit -m ""
+git push -u origin master
+
+版本回退
+git log
+git commit -m "**"
+git reset --hard **
+
+git checkout master//切换到master分支
+git merge develop//合并
+
+git push -f//除非只有自己一个人用，不然不要push --force
+
+由工作区到暂存区：add
+由暂存区到版本区：commit
+
+工作区提交到暂存区
+git add xxx ：指定文件提交到暂存区
+git add . ：全部提交到暂存区，包含修改和增加的，但不包含删除的
+git add -u：全部提交到暂存区，包含修改和删除的，但不包含新增的
+git add -A：. 并且 -u
+
+暂存区提交到历史区
+git commit ：提交到历史区（此提交方式注意：需要备注操作信息）
+git commit -m 'xxx' （操作描述）：提交到历史区
+git log ： 查看提交记录
+git reflog ：查看所有历史记录
+
+查看每个区代码区别
+git diff ：工作区 和 暂存区
+git diff --cached ：暂存区 和 历史区
+
+提交到 github 上（远程有仓库）
+git remote -v ：查看所有关联信息
+git remote add xxx[ 远程仓库 git 地址 ] ：建立关联
+git remote remove xxx[ 默认名：origin 可自定义 ] ：移除关联
+
+拉取
+    前面说了，远程有仓库，提交之前先拉取远程仓库
+    git pull origin（默认名） master
+
+提交
+    正式提交
+    git push origin master
