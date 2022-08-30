@@ -1,3 +1,20 @@
+
+提交步骤汇总
+1、在需要git管理的目标根目录下创建git
+git init
+2、将根目录下的所有文件添加进staging
+git add -A  或git add .           //添加所有
+git add [file1] [file2] ...          //添加一个或多个文件
+3、将其提交到本地仓库
+git commit -m "备注信息"
+4、关联远程仓库（前提是已经关联完github账号和ssh key）
+在github上新建项目并复制ssh地址
+git remote add origin 你复制的地址
+5、提交到github
+git push -u origin master
+
+
+
 将网上的仓库同步到一个文件夹中
 git init
 git remote add origin ** //远程添加源头
